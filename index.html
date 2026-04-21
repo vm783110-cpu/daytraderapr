@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Day Trader</title>
 
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '951326107369221'); // Updated Pixel ID
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=951326107369221&ev=PageView&noscript=1"/>
+</noscript>
+<style>
+body{
+margin:0;
+background:#f2f2f2;
+font-family:Arial, sans-serif;
+text-align:center;
+}
+.container{
+max-width:420px;
+margin:auto;
+padding:20px;
+}
+.card{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.profile{
+width:150px;
+height:150px;
+border-radius:50%;
+border:6px solid #1e88e5;
+margin:20px auto; /* Adjusted margin since top button is removed */
+overflow:hidden;
+}
+.profile img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+h2{
+color:#1e88e5;
+margin:15px 0 5px;
+}
+.points{
+background:#e3f2fd;
+padding:12px;
+border-radius:12px;
+margin:10px 0;
+font-weight:bold;
+}
+.joinbtn{
+background:#1e88e5;
+color:#fff;
+padding:15px;
+border-radius:12px;
+font-weight:bold;
+margin-top:15px;
+cursor:pointer;
+}
+.timer{
+margin-top:15px;
+color:red;
+font-weight:bold;
+}
+.ads-credit {
+margin-top: 25px;
+font-size: 14px;
+}
+.ads-credit a {
+color: #666;
+text-decoration: none;
+font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<div class="profile">
+<img src="logo.png" alt="Day Trader">
+</div>
+
+<h2>📊 Day Trader 📊</h2>
+<p>⚡ Intraday Trader | Market Analysis | Live Updates ⚡</p>
+
+<div class="points">📈 Live Market Updates</div>
+<div class="points">📊 Intraday & Swing Analysis</div>
+<div class="points">💡 Learn & Grow Daily</div>
+<div class="points">🔥 Trusted Trading Community</div>
+
+<div class="joinbtn" onclick="redirectNow()">
+JOIN TELEGRAM CHANNEL
+</div>
+
+<div class="timer" id="timer">
+Offer closes in 15 seconds
+</div>
+
+<div class="ads-credit">
+<a href="https://t.me/+jE7sEbzR23gwM2U1" target="_blank">Ads Managed by Kunal</a>
+</div>
+
+</div>
+</div>
+
+<script>
+let seconds = 15;
+let redirected = false;
+let link = "https://t.me/+CwFnvPpzWXtmM2U1"; // Main Telegram Link
+
+let countdown = setInterval(function(){
+
+if(redirected) return;
+
+seconds--;
+
+document.getElementById("timer").innerHTML =
+"Offer closes in " + seconds + " seconds";
+
+if(seconds <= 0){
+redirected = true;
+clearInterval(countdown);
+fbq('track','Lead'); 
+window.location.replace(link);
+}
+
+},1000);
+
+function redirectNow(){
+if(!redirected){
+redirected = true;
+fbq('track','Lead'); 
+window.location.replace(link);
+}
+}
+</script>
+
+</body>
+</html>
